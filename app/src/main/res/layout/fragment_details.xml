@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".details.DetailsFragment"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/imagenInfoPeliculas"
+        android:layout_width="match_parent"
+        android:layout_height="456dp"
+        android:background="#000000"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/textTituloInfoPeliculas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peliculas"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/textDescripcionInfoPeliculas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esto es una pelicual sacada en el 2022 y esta bastante chula"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+       android:layout_margin="20dp"
+        android:textSize="15dp"
+        />
+
+</LinearLayout>
