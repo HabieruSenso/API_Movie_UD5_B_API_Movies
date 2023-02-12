@@ -48,7 +48,7 @@ class DetailsFragment : Fragment() {
 
             }
 
-        (activity as? AppCompatActivity)?.supportActionBar?.title = movieAgent?.title
+        (activity as? AppCompatActivity)?.supportActionBar?.title = ""
         getMovies(movieAgent?.id.toString())
 
         val tituloPelicula = view.findViewById<TextView>(R.id.textTituloInfoPeliculas)
