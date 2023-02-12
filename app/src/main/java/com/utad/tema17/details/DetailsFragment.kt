@@ -49,7 +49,7 @@ class DetailsFragment : Fragment() {
             }
 
         (activity as? AppCompatActivity)?.supportActionBar?.title = ""
-        getMovies(movieAgent?.id.toString())
+
 
         val tituloPelicula = view.findViewById<TextView>(R.id.textTituloInfoPeliculas)
                 tituloPelicula.text = movieAgent?.title
@@ -63,29 +63,5 @@ class DetailsFragment : Fragment() {
 
     }
 
-    private fun getMovies(id: String) {
-        val call = ApiRest.service.getMovies(id)
 
-        call.enqueue(object : Callback<MovieResponse> {
-            override fun onResponse(
-                call: Call<MovieResponse>,
-                response: Response<MovieResponse>
-            ) {
-                val body = response.body()
-
-                if (response.isSuccessful && body != null) {
-                    data.clear()
-                    data.addAll(body.results)
-                    Log.d(ContentValues.TAG, data.toString())
-                    // Imprimir aqui el listado con logs
-                } else {
-                    Log.e(ContentValues.TAG, response.errorBody()?.string() ?: "Error")
-                }
-            }
-
-            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
-                Log.e(ContentValues.TAG, t.message.toString())
-            }
-        })
-    }
 }
